@@ -28,8 +28,8 @@
   ],
 
   "dependencies": {
-    "angular": "1.2.10",
-    "angular-mocks": "1.2.10",
+    "angular": "1.2",
+    "angular-mocks": "1.2",
     "marked": "0.3.0"
   },
   "devDependencies": {
