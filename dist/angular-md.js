@@ -11,12 +11,15 @@ angular.module('yaru22.md', []).directive('md', function () {
       }
     });
   }
+
   return {
     restrict: 'E',
     require: '?ngModel',
     link: function ($scope, $elem, $attrs, ngModel) {
       if (!ngModel) {
-        var html = marked($elem.text());
+        var textQuotes = $elem.text().trim();
+        var text = textQuotes.substring(1, textQuotes.length-1);
+        var html = marked(text);
         $elem.html(html);
         return;
       }
